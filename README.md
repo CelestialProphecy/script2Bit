@@ -1,0 +1,2 @@
+# script2Bit
+This is a repo for koding hackathon 2016. We are building an automation tool for film makers and producers that creates scheduling agents from a movie script. This tool efficiently breaks down a script into components for use in creating call sheets, SMS, email notices and other vital elements of movie production. Film makers often cite the biggest challenge in productions as building schedules from movie scripts. Our tool will reduce the manual data entry of call sheets, and will automatically notify cast and crew members when they are needed on set.
