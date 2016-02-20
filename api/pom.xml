@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>Script2Bit</groupId>
+    <artifactId>com.script2Bit</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <logback.version>1.1.2</logback.version>
+        <jdk.version>1.7</jdk.version>
+        <slf4j.version>1.7.10</slf4j.version>
+        <dropwizard.version>0.9.1</dropwizard.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <ua.detector.version>2014.10</ua.detector.version>
+        <build.environment>dev</build.environment>
+    </properties>
+<dependencies>
+    <dependency>
+        <groupId>io.dropwizard</groupId>
+        <artifactId>dropwizard-core</artifactId>
+        <version>${dropwizard.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>io.dropwizard</groupId>
+        <artifactId>dropwizard-client</artifactId>
+        <version>${dropwizard.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>io.dropwizard</groupId>
+        <artifactId>dropwizard-testing</artifactId>
+        <version>${dropwizard.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>io.federecio</groupId>
+        <artifactId>dropwizard-swagger</artifactId>
+        <version>0.7.0</version>
+    </dependency>
+    <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4</version>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+    </dependency>
+</dependencies>
+</project>

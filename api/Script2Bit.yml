@@ -1,0 +1,7 @@
+swagger:
+  resourcePackage: com.script2Bit.dw.resources
+  title: Script2Bit API Documentation
+
+mail :
+  username : script2bit@studivo.com
+  password : w0rdpass!
