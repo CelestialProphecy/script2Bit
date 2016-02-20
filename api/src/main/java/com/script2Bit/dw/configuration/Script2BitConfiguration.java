@@ -2,6 +2,7 @@ package com.script2Bit.dw.configuration;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.script2Bit.dw.Mail.MailConfiguration;
+import com.script2Bit.dw.SMS.SMSConfiguration;
 import io.dropwizard.Configuration;
 import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
 
@@ -19,8 +20,15 @@ public class Script2BitConfiguration extends Configuration {
   @JsonProperty("swagger")
   public SwaggerBundleConfiguration swaggerBundleConfiguration;
 
+  @JsonProperty("sms")
+  public SMSConfiguration smsConfiguration;
+
   public MailConfiguration getMailConfiguration() {
     return  mailConfiguration;
+  }
+
+  public SMSConfiguration getSmsConfiguration() {
+    return  smsConfiguration;
   }
 
 }

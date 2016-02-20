@@ -34,7 +34,6 @@
     <orderEntry type="library" name="Maven: io.dropwizard:dropwizard-configuration:0.9.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.6.3" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.15" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.4" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard:dropwizard-logging:0.9.1" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-logback:3.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.12" level="project" />
@@ -90,7 +89,6 @@
     <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-locator:2.4.0-b31" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.3" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-httpclient:3.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.connectors:jersey-apache-connector:2.22.1" level="project" />
@@ -121,5 +119,12 @@
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.10" level="project" />
+    <orderEntry type="library" name="Maven: com.twilio.sdk:twilio-java-sdk:6.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.3.2" level="project" />
+    <orderEntry type="library" name="Maven: com.googlecode.json-simple:json-simple:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.3" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.3" level="project" />
+    <orderEntry type="library" name="Maven: io.jsonwebtoken:jjwt:0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.4" level="project" />
   </component>
 </module>

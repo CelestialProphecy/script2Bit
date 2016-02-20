@@ -1,7 +1,26 @@
+server:
+  rootPath: '/v1/*'
+  applicationConnectors:
+  - type: http
+    port: 2100
+  adminConnectors:
+  - type: http
+    port: 2102
+  requestLog:
+    appenders:
+    - type: file
+      currentLogFilename: ./log/requests.log
+      archivedLogFilenamePattern: ./log/requests-%d.log.gz
+      archivedFileCount: 48
+
 swagger:
   resourcePackage: com.script2Bit.dw.resources
   title: Script2Bit API Documentation
 
 mail :
-  username : script2bit@studivo.com
-  password : w0rdpass!
+  userName : script2bit@studivo.com
+  password : 0rdpass!
+
+sms :
+  accountSid : AC95fd60476697b034ca4ec78bcb14f477
+  authToken : d882c6bca2c557eee4bf80d4993af311
