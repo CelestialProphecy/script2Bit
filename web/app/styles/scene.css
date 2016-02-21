@@ -1,6 +1,6 @@
 .scenes-roll-item {
   background-color: black;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
   height: 20rem;
   width: 40rem;
 }
@@ -15,6 +15,25 @@
 
 .scenes-roll-item:not(.slick-center) .scenes-roll-item-placeholder {
   opacity: 0.7;
+}
+
+.scene-roll-holes {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.scene-roll-hole-outer {
+  display: table-cell;
+  width: 3rem;
+}
+
+.scene-roll-hole-inner {
+  background: white;
+  height: 1rem;
+  width: 2rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
 }
 
 .scene-name {
