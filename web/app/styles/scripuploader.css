@@ -1,0 +1,77 @@
+.new-script-modal {
+  text-align: center;
+  padding: 2rem;
+}
+
+.script-upload-button {
+  height: 10rem;
+  width: 10rem;
+  font-size: 5rem;
+  border-radius: 50%;
+}
+
+.script-upload-button-label {
+  font-size: 5rem;
+  margin-left: 2rem;
+}
+
+.script-upload-section {
+  cursor: pointer;
+}
+
+.script-upload-section-separator {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.horizontal-separator-left,
+.horizontal-separator-right {
+  height: 0;
+  border: 0.1rem dashed #adadad;
+  width: 45%;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.horizontal-separator-left {
+  float: left;
+}
+
+.horizontal-separator-right {
+  float: right;
+}
+
+.script-paste-section {
+  width: 100%;
+  height: 30rem !important;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.new-script-modal-footer {
+  height: 3rem;
+}
+
+.script-submit-button {
+  float: right;
+  margin: 1rem 0;
+}

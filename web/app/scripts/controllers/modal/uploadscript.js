@@ -8,7 +8,22 @@
  * Controller of the script2Bit
  */
 script2Bit
-  .controller('uploadScriptCtrl', ['$scope', function ($scope) {
+  .controller('uploadScriptCtrl', ['$scope', '$uibModalInstance', function ($scope, $uibModalInstance) {
+    $scope.parseScript = function(scriptText) {
+      // TODO: parse script text and load scenes view
+      console.log(scriptText);
+      $uibModalInstance.close();
+    };
 
-
+    $scope.loadScriptFile = function(element) {
+      $scope.uploading = true;
+         $scope.$apply(function(scope) {
+             var file = element.files[0];
+             var reader = new FileReader();
+             reader.onload = function(evt) {
+                $scope.parseScript(evt.target.result);
+             };
+             reader.readAsText(file, 'UTF-8');
+         });
+    };
   }]);

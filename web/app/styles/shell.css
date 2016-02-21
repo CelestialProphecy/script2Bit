@@ -26,6 +26,7 @@
 .script2bit-toolbar {
   display: inline-block;
   float: right;
+  margin-top: -0.5rem;
 }
 
 .script2bit-toolbar span {

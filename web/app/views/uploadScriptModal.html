@@ -1,0 +1,19 @@
+<div class="new-script-modal">
+  <div class="script-upload-section btn-file">
+    <input type="file" ng-model="scriptfile" onchange="angular.element(this).scope().loadScriptFile(this)">
+    <button type="button" class="script-upload-button glyphicon glyphicon-open-file"></button>
+    <span class="script-upload-button-label">{{uploading ? 'Uploading' : 'Upload'}} script</span>
+  </div>
+
+  <div class="script-upload-section-separator">
+    <div class="horizontal-separator-left"></div>
+    <span>&nbsp;OR&nbsp;</span>
+    <div class="horizontal-separator-right"></div>
+  </div>
+
+  <textarea class="script-paste-section form-control" placeholder="Paste your script" ng-model="enteredScript"></textarea>
+
+  <div class="new-script-modal-footer">
+    <button type="button" class="btn btn-primary script-submit-button" ng-click="parseScript(enteredScript)">Submit</button>
+  </div>
+</div>

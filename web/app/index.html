@@ -18,6 +18,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/shell.css">
+    <link rel="stylesheet" href="styles/scripuploader.css">
     <link rel="stylesheet" href="styles/scene.css">
     <link rel="stylesheet" href="styles/actors.css">
     <link rel="stylesheet" href="styles/dialogue.css">
@@ -31,15 +32,15 @@
     <div class="header script2bit-shell">
       <img class="logo-image" src="images/script2Bit_logo.png"/>
       <span class="logo-title">Script2Bit</span>
-      <div class="pull-right" ng-show="$root.loggedIn" ng-controller="UserLoginCtrl">
-        <div class="script2bit-toolbar">
-          <button type="button" class="btn btn-primary" ng-click="openUploadScriptModal()">
-            <span class="glyphicon glyphicon-plus"></span>
-            <span>New Script</span>
-          </button>
-        </div>
+
+      <div class="script2bit-toolbar" ng-show="$root.loggedIn" ng-controller="UserLoginCtrl">
+        <button type="button" class="btn btn-primary" ng-click="openUploadScriptModal()">
+          <span class="glyphicon glyphicon-plus"></span>
+          <span>New Script</span>
+        </button>
+
         <a class="dropdown-toggle count-info" data-toggle="dropdown" href="javascript:;">
-          <img alt="image" class="img-circle" ng-src="{{$root.user.image}}" style="height: 38px;" />
+          <img alt="image" class="img-circle" ng-src="{{$root.user.image}}" style="height: 38px;"/>
         </a>
         <ul class="dropdown-menu dropdown-alerts">
           <li>
@@ -111,7 +112,6 @@
         <script src="scripts/services/helpers/actorhelper.js"></script>
         <script src="scripts/services/mockdataservice.js"></script>
         <script src="scripts/script2Bit.js"></script>
-        <script src="scripts/util.js"></script>
         <script src="scripts/fountain.js"></script>
         <script src="scripts/services/user/loginservice.js"></script>
         <script src="scripts/services/smsservice.js"></script>
