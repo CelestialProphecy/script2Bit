@@ -1,0 +1,62 @@
+.scenes-roll-item {
+  background-color: black;
+  padding: 2rem 1rem;
+  height: 20rem;
+  width: 40rem;
+}
+
+.scenes-roll-item-placeholder {
+  background-color: white;
+  padding: 1rem;
+  height: 16rem;
+  width: 38rem;
+  text-align: center;
+}
+
+.scenes-roll-item:not(.slick-center) .scenes-roll-item-placeholder {
+  opacity: 0.7;
+}
+
+.scene-name {
+  margin-top: 5rem;
+  font-size: 3rem;
+}
+
+.slick-prev, .slick-next {
+  margin-top: -2.5rem;
+  height: 5rem;
+  width: 5rem;
+}
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+  visibility: hidden;
+}
+
+.slick-prev {
+  margin-left: 6rem;
+}
+
+.slick-next {
+  margin-right: 8rem;
+}
+
+.slick-prev::before, .slick-next::before {
+  color: black;
+  font-size: 7rem;
+  line-height: 6rem;
+}
+
+.scene-info {
+  height: 5rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.scene-actors {
+  width: 30%;
+  min-width: 20rem;
+  overflow-y: auto;
+  height: 30rem;
+  padding: 2rem;
+}

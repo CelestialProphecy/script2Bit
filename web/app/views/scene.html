@@ -1,0 +1,28 @@
+<slick class="scenes-roll" dots="true" variable-width="true" adaptive-height="true" center-mode="true" infinite="false" arrows="true"
+       slides-to-show="5" touch-move="true" slides-to-scroll="1" autoplay="false" data="scenes" css-ease="linear"
+       init-onload="true">
+  <div class="scenes-roll-item" ng-repeat="scene in scenes track by $index">
+    <div class="scenes-roll-item-placeholder">
+      <div class="scene-name">{{scene}}</div>
+    </div>
+  </div>
+</slick>
+
+<div class="scene-info"></div>
+<a class="scene-changer" ng-click="onSceneChange()" ng-show="false">change</a>
+
+<div class="scene-actors">
+  <ul class="actors-list">
+    <li class="actors-list-item" ng-repeat="actor in actors">
+      <div class="actor-icon" ng-style="{background:'{{actor.color}}'}">{{actor.initials}}</div>
+      <span class="actor-name" ng-style="{color:'{{actor.color}}'}">{{actor.name}}</span>
+      <div class="actor-contact-icons">
+        <span class="glyphicon glyphicon-earphone"></span>
+        <span class="glyphicon glyphicon-envelope"></span>
+      </div>
+    </li>
+  </ul>
+  <!--div class="alert" style="background-color:#fa39c3;color:white" role="alert" ng-repeat="actor in actors">
+      <div ng-transclude><span ng-bind="actor"></span></div>
+    </div-->
+</div>

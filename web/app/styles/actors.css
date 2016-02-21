@@ -1,0 +1,40 @@
+.actors-list {
+  list-style: none;
+  padding: 0;
+}
+
+.actors-list-item {
+  margin-bottom: 2rem;
+}
+
+.actor-icon {
+  height: 4rem;
+  width: 4rem;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 4rem;
+  vertical-align: middle;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.actor-name {
+  line-height: 4rem;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.actor-contact-icons {
+  display: inline-block;
+  float: right;
+  line-height: 4rem;
+}
+
+.actor-contact-icons .glyphicon {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}

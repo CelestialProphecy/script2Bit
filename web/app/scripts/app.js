@@ -15,13 +15,20 @@ var script2Bit = angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'slick',
+    'ngMaterial',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/login.html',
-        controller: 'UserLoginCtrl',
+        controller: 'UserLoginCtrl'
+      })
+      .when('/scene', {
+        templateUrl: 'views/scene.html',
+        controller: 'SceneCtrl'
       })
       .otherwise({
         redirectTo: '/'
