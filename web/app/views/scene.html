@@ -33,8 +33,8 @@
         <span class="actor-name" ng-style="{color:'{{actorInfo.color}}'}">{{actorName}}</span>
       </div>
       <div class="actor-contact-icons">
-        <span class="glyphicon glyphicon-earphone"></span>
-        <span class="glyphicon glyphicon-envelope"></span>
+        <span class="glyphicon glyphicon-earphone" ng-click="sendSMS()"></span>
+        <span class="glyphicon glyphicon-envelope" ng-click="sendMail()"></span>
       </div>
     </li>
   </ul>

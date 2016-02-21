@@ -44,5 +44,5 @@ var script2Bit = angular
     $logProvider.debugEnabled(true);
   }])
   .run(['$rootScope',function($rootScope) {
-    $rootScope.loggedIn = true;
+    $rootScope.loggedIn = false;
   }]);;
