@@ -7,22 +7,39 @@
     </div>
   </div>
 </slick>
+<a class="scene-changer" ng-click="onSceneChange()" ng-show="false">.</a>
 
-<div class="scene-info"></div>
-<a class="scene-changer" ng-click="onSceneChange()" ng-show="false">change</a>
+<div class="scene-info">
+  <div class="scene-info-item"><span class="scene-info-label">Location: </span><span>{{location ? location : '--'}}</span></div>
+  <div class="scene-info-item"><span class="scene-info-label">Time: </span><span>{{time ? time : '--'}}</span></div>
+  <div class="scene-info-item"><span class="scene-info-label">Duration: </span><span>{{duration ? duration : '--'}}</span></div>
+</div>
 
-<div class="scene-actors">
+<div class="scene-actors-container">
   <ul class="actors-list">
-    <li class="actors-list-item" ng-repeat="actor in actors">
-      <div class="actor-icon" ng-style="{background:'{{actor.color}}'}">{{actor.initials}}</div>
-      <span class="actor-name" ng-style="{color:'{{actor.color}}'}">{{actor.name}}</span>
+    <li class="actors-list-item" ng-repeat="(actorName, actorInfo) in actors">
+      <div class="actors-list-item-label" title="Expand all {{actorName}}'s dialogues" ng-click="expandDialogues(actorName)">
+        <div class="actor-icon" ng-style="{background:'{{actorInfo.color}}'}">{{actorInfo.initials}}</div>
+        <span class="actor-name" ng-style="{color:'{{actorInfo.color}}'}">{{actorName}}</span>
+      </div>
       <div class="actor-contact-icons">
         <span class="glyphicon glyphicon-earphone"></span>
         <span class="glyphicon glyphicon-envelope"></span>
       </div>
     </li>
   </ul>
-  <!--div class="alert" style="background-color:#fa39c3;color:white" role="alert" ng-repeat="actor in actors">
-      <div ng-transclude><span ng-bind="actor"></span></div>
-    </div-->
+</div>
+
+<div class="scene-dialogues-container">
+  <div class="dialogue-list">
+    <div class="dialogue-list-item" ng-repeat="dialogue in dialogues" data-actor="{{dialogue.actor}}">
+      <div class="actor-icon-container">
+        <div class="actor-icon" ng-style="{background:'{{actors[dialogue.actor].color}}'}">{{actors[dialogue.actor].initials}}</div>
+      </div>
+      <div class="dialogue-box-container">
+        <div class="dialogue-box alert" ng-style="{background:'{{actors[dialogue.actor].color}}'}" ng-click="expandDialogue($index)">{{dialogue.content}}</div>
+      </div>
+    </div>
+
+  </div>
 </div>

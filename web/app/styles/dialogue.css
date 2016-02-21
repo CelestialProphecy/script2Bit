@@ -1,0 +1,26 @@
+.dialogue-list-item {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.actor-icon-container {
+  display: table-cell;
+  width: 5rem;
+  height: 4rem;
+}
+
+.dialogue-box-container {
+  display: table-cell;
+}
+
+.dialogue-box {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.dialogue-list-item.expanded .dialogue-box {
+  white-space: inherit;
+}

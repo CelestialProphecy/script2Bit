@@ -7,6 +7,11 @@
   margin-bottom: 2rem;
 }
 
+.actors-list-item-label {
+  display: inline-block;
+  cursor: pointer;
+}
+
 .actor-icon {
   height: 4rem;
   width: 4rem;
