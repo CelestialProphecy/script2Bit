@@ -16,7 +16,8 @@ module.exports = function (grunt) {
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin',
     ngtemplates: 'grunt-angular-templates',
-    cdnify: 'grunt-google-cdn'
+    cdnify: 'grunt-google-cdn',
+    ngconstant : 'grunt-ng-constant'
   });
 
   // Configurable paths for the application
@@ -27,7 +28,40 @@ module.exports = function (grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
-
+    ngconstant: {
+          // Options for all targets
+          options: {
+            space: '  ',
+            wrap: '"use strict";\n\n {%= __ngModule %}',
+            name: 'config',
+          },
+          // Environment targets
+          // local dev
+          dev: {
+            options: {
+              dest: '<%= yeoman.app %>/scripts/config.js'
+            },
+            constants: {
+              ENV: {
+                name: 'development',
+                API: 'http://localhost:2100/v1',
+                redirect : '/'
+              }
+            }
+          },
+          dist: {
+            options: {
+              dest: '<%= yeoman.dist %>/scripts/config.js'
+            },
+            constants: {
+              ENV: {
+                name: 'dist',
+                API: 'http://localhost:2100/v1',
+                redirect : '/'
+              }
+            }
+          }
+    },
     // Project settings
     yeoman: appConfig,
 
@@ -72,7 +106,7 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
+        hostname: '0.0.0.0',
         livereload: 35729
       },
       livereload: {
@@ -436,6 +470,7 @@ module.exports = function (grunt) {
       'clean:server',
       'wiredep',
       'concurrent:server',
+      'ngconstant:dev',
       'postcss:server',
       'connect:livereload',
       'watch'
@@ -461,6 +496,7 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
+    'ngconstant:dev',
     'postcss',
     'ngtemplates',
     'concat',

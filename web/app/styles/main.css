@@ -10,10 +10,69 @@
   padding: 0.2em 0;
 }
 
+.login-box {
+  background-color: black;
+  min-height: 320px;
+  border-radius: 25px;
+  margin-top: 60px;
+}
+
+.white-text {
+  color: #FFF;
+}
+
 body {
   padding: 0;
   background-color: rgb(250,250,250);
   height: auto;
+}
+
+.text-12{
+font-size: 12px;
+}
+.text-14{
+font-size: 14px;
+}
+.text-16{
+font-size: 16px;
+}
+.text-17{
+    font-size: 17px;
+}
+.text-18{
+    font-size: 18px;
+}
+.text-20{
+    font-size:20px;
+}
+.text-17-rs-14{
+    font-size:17px;
+}
+.text-28{
+font-size: 28px;
+}
+.text-22{
+    font-size: 22px;
+}
+.text-24{
+    font-size: 24px;
+}
+.text-30{
+    font-size: 30px
+}
+.text-40{
+    font-size: 40px
+}
+.text-45{
+    font-size: 45px !important;
+}
+.text-80{
+    font-size: 80px !important;
+}
+
+.user-name {
+  color: black;
+  padding-left: 25px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -42,6 +101,8 @@ body {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  text-align: center;
+  margin-top: 150px;
 }
 
 .container-narrow > hr {

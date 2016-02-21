@@ -1,0 +1,23 @@
+[
+  {
+    "username" : "rajat",
+    "password" : "nigam",
+    "name" : "rajat nigam",
+    "id" : "123456",
+    "image" : "./images/yeoman.png"
+  },
+  {
+    "username" : "vaibhav",
+    "password" : "nigam",
+    "name" : "vaibhav nigam",
+    "id" : "234567",
+    "image" : "./images/yeoman.png"
+  },
+  {
+    "username" : "budi",
+    "password" : "mulyo",
+    "name" : "budi mulyo",
+    "id" : "567890",
+    "image" : "./images/yeoman.png"
+  }
+]

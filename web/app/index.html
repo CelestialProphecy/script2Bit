@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -30,11 +31,36 @@
     <div class="header script2bit-shell">
       <img class="logo-image" src="images/script2Bit_logo.png"/>
       <span class="logo-title">Script2Bit</span>
-      <div class="script2bit-toolbar">
-        <button type="button" class="btn btn-primary">
-          <span class="glyphicon glyphicon-plus"></span>
-          <span>New Script</span>
-        </button>
+      <div class="pull-right" ng-show="$root.loggedIn" ng-controller="UserLoginCtrl">
+        <div class="script2bit-toolbar">
+          <button type="button" class="btn btn-primary" ng-click="openUploadScriptModal()">
+            <span class="glyphicon glyphicon-plus"></span>
+            <span>New Script</span>
+          </button>
+        </div>
+        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="javascript:;">
+          <img alt="image" class="img-circle" ng-src="{{$root.user.image}}" style="height: 38px;" />
+        </a>
+        <ul class="dropdown-menu dropdown-alerts">
+          <li>
+            <span class="clear">
+              <span class="block m-t-xs">
+                <strong class="font-bold text-18 user-name">{{$root.user.name}}</strong>
+              </span>
+            </span>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a ng-click="logout()">
+              <div class="text-center link-block">
+                <md-button class="btn btn-default btn-block" flex-gt-md="auto">
+                  LogOut
+                </md-button>
+
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -42,6 +68,9 @@
       <div ng-view=""></div>
     </div>
 
+    <div class="footer">
+      <span> Copyright reserved &copy; Script2Bit Team (Koding Hackathon 2016) </span>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -71,6 +100,7 @@
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-messages/angular-messages.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/toastr/toastr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -78,9 +108,15 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/user/login.js"></script>
         <script src="scripts/controllers/scene.js"></script>
-        <script src="scripts/fountain.js"></script>
         <script src="scripts/services/helpers/actorhelper.js"></script>
         <script src="scripts/services/mockdataservice.js"></script>
+        <script src="scripts/script2Bit.js"></script>
+        <script src="scripts/util.js"></script>
+        <script src="scripts/fountain.js"></script>
+        <script src="scripts/services/user/loginservice.js"></script>
+        <script src="scripts/services/smsservice.js"></script>
+        <script src="scripts/controllers/modal/uploadscript.js"></script>
+        <script src="scripts/services/mailservice.js"></script>
         <!-- endbuild -->
 </body>
 </html>
