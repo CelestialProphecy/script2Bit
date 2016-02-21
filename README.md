@@ -1,30 +1,18 @@
 ![script2Bit icon][logo]
 [logo]:http://celestialprophecy.github.io/script2Bit/img//script2Bit_logo.png "script2Bit logo"
 # script2Bit
-    script2Bit is a script conversion software for 
-    film makers and producers making Call Sheets and 
-    Production Reports Fast, Easy, and Free.
+** making Call Sheets and Production Reports Fast, Easy, and Free**    
+
+    script2Bit is a script conversion and scheduling software for film makers and producers.        
 
 ## Synopsis
 We are building an automation tool for film makers and producers that creates scheduling agents from **a movie script**. This tool efficiently breaks down a script into components for use in creating call sheets, SMS, email notices and other vital elements of movie production. 
-
-
 
 ## Usage
 
 ### script2Bit converts Screenplay into Call Sheet.
 
 See the sample project for a simple example of how the script conversion works.
-
-#### Sample Screenplay Page
-![Sample Screenplay Page][11]
-
-[11]: https://www.writersstore.com/system/imagemanager/sample-screenplay-page.gif "Sample Screenplay Page"
-
-#### Call Sheet Template
-![Call Sheet Template][12]
-
-[12]: http://nofilmschool.com/wp-content/uploads/2014/05/small-call-sheet-template.jpg "Call Sheet Template"
 
 TODO: Write usage instructions
 
@@ -78,6 +66,16 @@ For more details on Fountain see [Fountain.io][fountain]
 **Twillio** is a cloud communications platform.
 For more details on Twillio see [Twillio][twillio]
 [twillio]: https://www.twilio.com/
+
+### Sample Screenplay Page
+![Sample Screenplay Page][screenplay]
+
+[screenplay]: https://www.writersstore.com/system/imagemanager/sample-screenplay-page.gif "Sample Screenplay Page"
+
+### Call Sheet Template
+![Call Sheet Template][call sheet]
+
+[call sheet]: http://nofilmschool.com/wp-content/uploads/2014/05/small-call-sheet-template.jpg "Call Sheet Template"
 
 ## Contributing
 
