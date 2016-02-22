@@ -8,10 +8,11 @@
  * Controller of the script2Bit
  */
 script2Bit
-  .controller('uploadScriptCtrl', ['$scope', '$uibModalInstance', function ($scope, $uibModalInstance) {
+  .controller('uploadScriptCtrl', ['$scope', '$rootScope', '$uibModalInstance', function ($scope, $rootScope, $uibModalInstance) {
     $scope.parseScript = function(scriptText) {
       // TODO: parse script text and load scenes view
-      console.log(scriptText);
+      //console.log(scriptText);
+      $rootScope.script = fountain.parseToJson(scriptText);
       $uibModalInstance.close();
     };
 

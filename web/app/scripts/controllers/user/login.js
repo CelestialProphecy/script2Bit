@@ -15,8 +15,8 @@ script2Bit.controller('UserLoginCtrl', ['$scope', '$http', 'loginService', '$loc
   var file;
     $http.get('../../../files/scriptFiles/Big-Fish.txt').success(function(data) {
       file = data;
-      var output = fountain.parseToJson(file);
-      console.log(JSON.stringify(output));
+      $rootScope.script = fountain.parseToJson(file);
+      //console.log(JSON.stringify($rootScope.script));
     });
   };
 

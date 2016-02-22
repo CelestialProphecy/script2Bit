@@ -8,62 +8,83 @@
  * Service in the script2Bit.
  */
 angular.module('script2Bit')
-  .service('mockDataService', function () {
+  .service('mockDataService', ['$rootScope', function ($rootScope) {
+
+
+    var getHeadings = function(scenes) {
+      if (!Array.isArray(scenes)) {
+        console.log("Scenes shouldbe an array");
+        return [];
+      }
+      var headings = [];
+      for (var i=0; i < scenes.length; i++) {
+        var scene = scenes[i];
+        for (var j=0; j < scene.length; j++) {
+          var element = scene[j];
+          if (element.type == "heading") {
+            headings.push("Scene " + (i) + ": " + element.heading);
+          }
+        }
+      }
+
+      return headings;
+    }
+
     // AngularJS will instantiate a singleton by calling "new" on this function
     return {
       getScenes: function () {
-        return [
-          'Scene 1',
-          'Scene 2',
-          'Scene 3',
-          'Scene 4',
-          'Scene 5',
-          'Scene 6',
-          'Scene 7',
-          'Scene 8',
-          'Scene 9',
-          'Scene 10'
-        ];
+        if (typeof $rootScope.script == 'undefined') {
+          console.log("No script loaded in $rootScope");
+          return [];
+        }
+        var scenes = getHeadings($rootScope.script.script.scenes);
+        return scenes;
       },
 
       getActorsForScene: function (sceneIndex) {
-        var dummyActors = ['Rajat', 'Vaibhav', 'Budi', 'Archis', 'Jon', 'Jack', 'Martina', 'Christopher'],
-          pivotIndex = (sceneIndex % 2) * 4;
+        var scene = $rootScope.script.script.scenes[sceneIndex];
+        var characters = [];
+        for (var elementId = 0; elementId < scene.length; elementId++) {
+          var element = scene[elementId];
+          if ((element.type == "dialogue-single" || element.type == "dialogue-dual") &&
+            typeof element.characters != 'undefined') {
+            for (var characterId = 0; characterId < element.characters.length; characterId++) {
+              var character = element.characters[characterId];
+              if (character.type == "character") {
+                characters.push(character.name);
+              }
+            }
+          }
+        }
 
-        return dummyActors.slice(pivotIndex, pivotIndex + 4);
+        //convert these to actors based on assignment
+        return characters;
       },
 
       getDialoguesForScene: function (sceneIndex) {
-        return [
-          {
-            actor: 'Rajat',
-            content: 'Hey.. What a surprise! How you doing?'
-          },
-          {
-            actor: 'Vaibhav',
-            content: 'I’m good. How are you? Didn’t see you since long. I’m good. How are you? Didn’t see you since long. I’m good. How are you? Didn’t see you since long.'
-          },
-          {
-            actor: 'Rajat',
-            content: 'Yeah! Meet my friend'
-          },
-          {
-            actor: 'Budi',
-            content: 'Hello'
-          },
-          {
-            actor: 'Archis',
-            content: 'Let\'s go out somewhere for dinner'
-          },
-          {
-            actor: 'Rajat',
-            content: 'Yeah! Meet my friend'
-          },
-          {
-            actor: 'Rajat',
-            content: 'Yeah! Meet my friend'
+        var scene = $rootScope.script.script.scenes[sceneIndex];
+        var dialogues = [];
+        for (var elementId = 0; elementId < scene.length; elementId++) {
+          var element = scene[elementId];
+          if ((element.type == "dialogue-single" || element.type == "dialogue-dual") &&
+            typeof element.characters != 'undefined') {
+            for (var characterId = 0; characterId < element.characters.length; characterId++) {
+              var character = element.characters[characterId];
+              if (character.type == "character") {
+                var actorLine = {actor: character.name, content: ""};
+                if (typeof character.lines != 'undefined') {
+                  for (var lineId = 0; lineId < character.lines.length; lineId++) {
+                    actorLine.content = actorLine.content + "\n" + character.lines[lineId].text;
+                  }
+                }
+                dialogues.push(actorLine);
+              }
+            }
           }
-        ];
+        }
+
+        return dialogues;
+
       }
     };
-  });
+  }]);
