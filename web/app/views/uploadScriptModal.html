@@ -1,7 +1,7 @@
 <div class="new-script-modal">
   <div class="script-upload-section btn-file">
     <input type="file" ng-model="scriptfile" onchange="angular.element(this).scope().loadScriptFile(this)">
-    <button type="button" class="script-upload-button glyphicon glyphicon-open-file"></button>
+    <button type="button" class="script-upload-button glyphicon glyphicon-open-file" ng-click="uploadButtonClick()"></button>
     <span class="script-upload-button-label">{{uploading ? 'Uploading' : 'Upload'}} script</span>
   </div>
 

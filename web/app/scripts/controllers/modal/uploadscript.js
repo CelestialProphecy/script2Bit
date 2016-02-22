@@ -28,4 +28,8 @@ script2Bit
              reader.readAsText(file, 'UTF-8');
          });
     };
+
+    $scope.uploadButtonClick = function() {
+      $('.script-upload-section input').click();
+    };
   }]);
