@@ -8,22 +8,38 @@
  * Service in the script2Bit.
  */
 angular.module('script2Bit')
-  .service('mockDataService', function () {
+  .service('mockDataService', ['$rootScope', function ($rootScope) {
+
+
+    var getHeadings = function(scenes) {
+      if (!Array.isArray(scenes)) {
+        console.log("Scenes shouldbe an array");
+        return [];
+      }
+      var headings = [];
+      for (var i=0; i < scenes.length; i++) {
+        var scene = scenes[i];
+        for (var j=0; j < scene.length; j++) {
+          var element = scene[j];
+          if (element.type == "heading") {
+            headings.push("Scene " + (i) + ": " + element.heading);
+          }
+        }
+      }
+
+      return headings;
+    }
+
     // AngularJS will instantiate a singleton by calling "new" on this function
     return {
       getScenes: function () {
-        return [
-          'Scene 1',
-          'Scene 2',
-          'Scene 3',
-          'Scene 4',
-          'Scene 5',
-          'Scene 6',
-          'Scene 7',
-          'Scene 8',
-          'Scene 9',
-          'Scene 10'
-        ];
+        if (typeof $rootScope.script == 'undefined') {
+          console.log("No script loaded in $rootScope");
+          return [];
+        }
+        var scenes = getHeadings($rootScope.script.script.scenes);
+        console.log(scenes);
+        return scenes;
       },
 
       getActorsForScene: function (sceneIndex) {
@@ -66,4 +82,4 @@ angular.module('script2Bit')
         ];
       }
     };
-  });
+  }]);
