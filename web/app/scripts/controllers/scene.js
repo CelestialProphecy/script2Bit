@@ -13,6 +13,9 @@ angular.module('script2Bit').controller('SceneCtrl', ['$scope', 'actorHelper', '
   var setSceneData = function(sceneIndex) {
     $scope.dialogues = mockDataService.getDialoguesForScene(sceneIndex);
     $scope.actors = actorHelper.getActorsFromDialogues($scope.dialogues);
+    $scope.location = mockDataService.getSceneLocation(sceneIndex);
+    $scope.duration = mockDataService.getSceneDuration(sceneIndex);
+    $scope.time = mockDataService.getSceneTime(sceneIndex);
   };
   var init = function() {
     $rootScope.loggedIn = true;
