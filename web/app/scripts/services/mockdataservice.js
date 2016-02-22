@@ -11,6 +11,18 @@ angular.module('script2Bit')
   .service('mockDataService', ['$rootScope', function ($rootScope) {
 
 
+    var toHHMMSS = function (sec_num) {
+      var hours   = Math.floor(sec_num / 3600);
+      var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+      var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+      if (hours   < 10) {hours   = "0"+hours;}
+      if (minutes < 10) {minutes = "0"+minutes;}
+      if (seconds < 10) {seconds = "0"+seconds;}
+      var time    = hours+':'+minutes+':'+seconds;
+      return time;
+    }
+
     var getHeadings = function(scenes) {
       if (!Array.isArray(scenes)) {
         console.log("Scenes shouldbe an array");
@@ -69,7 +81,8 @@ angular.module('script2Bit')
       },
 
       getSceneDuration: function (sceneIndex) {
-
+        var scene = $rootScope.script.script.scenes[sceneIndex];
+        return toHHMMSS(scene.length * 10); //each element should take 10 seconds - random guess I pulled out of where the sun don't shine.
       },
       getSceneTime: function (sceneIndex) {
         var headings = [];
