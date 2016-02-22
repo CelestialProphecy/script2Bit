@@ -2,27 +2,34 @@
 [logo]:http://celestialprophecy.github.io/script2Bit/img//script2Bit_logo.png "script2Bit logo"
 # script2Bit
 ** making Call Sheets and Production Reports Fast, Easy, and Free**    
-
+___
     script2Bit is a script conversion and scheduling software for film makers and producers.        
 
 ## Synopsis
 We are building an automation tool for film makers and producers that creates scheduling agents from **a movie script**. This tool efficiently breaks down a script into components for use in creating call sheets, SMS, email notices and other vital elements of movie production. 
 
+## Motivation
+
+Film makers often cite the biggest challenge in productions as building schedules from movie scripts. Our tool will reduce the manual data entry of call sheets, and will automatically notify cast and crew members when they are needed on set.
+
 ## Usage
 
-### script2Bit converts Screenplay into Call Sheet.
+### script2Bit converts Screenplays into Call Sheets and send text/email notifications to cast and crew.
 
-See the sample project for a simple example of how the script conversion works.
+See this sample project for a simple demonstration of how the script conversion works:
+1. You wrote a script: Titled [Big Fish](http://fountain.io/_downloads/Big-Fish.fountain).
+2. You Login to our awesome script2Bit:
+3. Start uploading or pasting your script into the nice looking interface:
+4. Let script2Bit do it's itsy bitsy magic:
+5. Enjoy!
 
-TODO: Write usage instructions
+It super simple and fun, right? So stop worrying and start creating, and let us do the heavy lifting. Let us know if you need other modules to help movie productions as well.
 
 ## Code Example
 
 TODO: Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
-## Motivation
 
-Film makers often cite the biggest challenge in productions as building schedules from movie scripts. Our tool will reduce the manual data entry of call sheets, and will automatically notify cast and crew members when they are needed on set.
 
 ## Installation
 
@@ -32,6 +39,15 @@ Film makers often cite the biggest challenge in productions as building schedule
 4. `npm install bower`
 5. `bower install`
 6. `grunt serve`
+
+### Tips and Troubleshooting
+* If you encounter errors during installation, try understand the error first.
+* Google and online forums such as stackoverflow are the best bet for solutions
+* These are what works for me:
+	* Try running it using `sudo`
+	* Try installing the latest/stable version of node.js and npm:
+		* [Node Upgrade](http://stackoverflow.com/questions/10075990/upgrading-node-js-to-latest-version "Node Upgrade")
+		* [NPM Upgrade](http://stackoverflow.com/questions/6237295/how-can-i-update-node-js-and-npm-to-the-next-versions "NPM Upgrade") 
 
 ### Web
 
@@ -84,6 +100,8 @@ For more details on Twillio see [Twillio][twillio]
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
+
+Share your success story with us please! :)
 
 ## Contact
 Let us know how you would like to dive into the project and collaborate with us.
