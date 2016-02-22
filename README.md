@@ -18,9 +18,22 @@ Film makers often cite the biggest challenge in productions as building schedule
 For example, you wrote a script: Titled [Big Fish](http://fountain.io/_downloads/Big-Fish.fountain). See this sample project for a simple demonstration of how the script conversion works:
 
 1. You Login to our awesome script2Bit:
+![Login icon][login] **Login**
+
+[login]: http://celestialprophecy.github.io/script2Bit/img/screenshot/script2Bit-login.jpg "Login Page"
 2. Start uploading or pasting your script into the nice looking interface:
+![Upload icon][upload] **Upload**
+
+[upload]: http://celestialprophecy.github.io/script2Bit/img/screenshot/script2Bit-upload-script.jpg "Login Page"
 3. Let script2Bit do it's itsy bitsy magic:
+![Breakdown icon][breakdown] **Breakdown**
+
+[breakdown]: http://celestialprophecy.github.io/script2Bit/img/screenshot/script2Bit-script-breakdown.jpg "Breakdown Page"
 4. Enjoy!
+![Contact icon][contact] **Contact**
+
+[contact]: http://celestialprophecy.github.io/script2Bit/img/screenshot/script2Bit-contact.jpg "Contact Page"
+
 
 So it's almost like 1-2-3, except with an addition of step number 4.
 
@@ -28,15 +41,83 @@ So it's almost like 1-2-3, except with an addition of step number 4.
 So, now you have cast and crew lined up ready to go for movie production and waiting for you to give them marching order. Here's the process to do that:
 
 1. Login to script2Bit:
+![Login icon][login] **Login**
+
+[login]: http://celestialprophecy.github.io/script2Bit/img/screenshot/script2Bit-login.jpg "Login Page"
 2. Select the script:
+![Breakdown icon][breakdown] **Breakdown**
+
+[breakdown]: http://celestialprophecy.github.io/script2Bit/img/screenshot/script2Bit-script-breakdown.jpg "Breakdown Page"
 3. March!
+![Contact icon][contact] **Contact**
+
+[contact]: http://celestialprophecy.github.io/script2Bit/img/screenshot/script2Bit-contact.jpg "Contact Page"
 
 It super simple and fun, right? 
 So, stop worrying and start creating, and let us do the heavy lifting. Let us know if you need other modules to help movie productions as well.
 
 ## Code Example
 
-TODO: Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+From this 
+[Big Fish](http://fountain.io/_downloads/Big-Fish.fountain) script
+
+to this
+
+```
+{  
+   "title_page":{  
+      "title":[  
+         "Big Fish"
+      ],
+      "credit":[  
+         "written by"
+      ],
+      "authors":[  
+         "John August"
+      ],
+      "source":[  
+         "based on the novel by Daniel Wallace"
+      ],
+      "notes":[  
+         "FINAL PRODUCTION DRAFT<br />includes post-production dialogue <br />and omitted scenes"
+      ],
+      "copyright":[  
+         "(c) 2003 Columbia Pictures"
+      ]
+   },
+   "script":[  
+      {  
+         "headings":[  
+            {  
+               "heading":"EXT.  RIVER / UNDERWATER - DAY"
+            }
+         ],
+         "actions":[  
+            "A fat and happy catfish swims towards us.",
+            "The fish passes us with a SPLASH.",
+            "<span class=\"bold underline\">THE END</span>"
+         ],
+         "dialogue":[  
+            {  
+               "characters":[  
+                  {  
+                     "type":"character",
+                     "name":"WILL (V.O.)",
+                     "dialogue":[  
+                        {  
+                           "type":"dialogue",
+                           "text":"And in that way, he becomes immortal."
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      }
+   ],
+   "title":"Big Fish"
+}
+```
 
 
 
