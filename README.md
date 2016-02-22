@@ -14,16 +14,25 @@ Film makers often cite the biggest challenge in productions as building schedule
 
 ## Usage
 
-### script2Bit converts Screenplays into Call Sheets and send text/email notifications to cast and crew.
+### script2Bit converts screenplays into call sheets.
+For example, you wrote a script: Titled [Big Fish](http://fountain.io/_downloads/Big-Fish.fountain). See this sample project for a simple demonstration of how the script conversion works:
 
-See this sample project for a simple demonstration of how the script conversion works:
-1. You wrote a script: Titled [Big Fish](http://fountain.io/_downloads/Big-Fish.fountain).
-2. You Login to our awesome script2Bit:
-3. Start uploading or pasting your script into the nice looking interface:
-4. Let script2Bit do it's itsy bitsy magic:
-5. Enjoy!
+1. You Login to our awesome script2Bit:
+2. Start uploading or pasting your script into the nice looking interface:
+3. Let script2Bit do it's itsy bitsy magic:
+4. Enjoy!
 
-It super simple and fun, right? So stop worrying and start creating, and let us do the heavy lifting. Let us know if you need other modules to help movie productions as well.
+So it's almost like 1-2-3, except with an addition of step number 4.
+
+### script2Bit sends text/email notifications to your cast and crew.
+So, now you have cast and crew lined up ready to go for movie production and waiting for you to give them marching order. Here's the process to do that:
+
+1. Login to script2Bit:
+2. Select the script:
+3. March!
+
+It super simple and fun, right? 
+So, stop worrying and start creating, and let us do the heavy lifting. Let us know if you need other modules to help movie productions as well.
 
 ## Code Example
 
