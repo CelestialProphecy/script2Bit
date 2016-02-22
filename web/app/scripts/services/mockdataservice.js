@@ -30,6 +30,19 @@ angular.module('script2Bit')
       return headings;
     }
 
+    //Removes those (V.O) or (CONT'D) parts
+    //from a character's name
+    var removeBraces = function(character_name) {
+      character_name = character_name.trim()
+      var index = character_name.indexOf("(");
+      if (index > 0) {
+        //take it out
+        character_name = character_name.substr(0, index).trim();
+      }
+
+      return character_name;
+    }
+
     // AngularJS will instantiate a singleton by calling "new" on this function
     return {
       getScenes: function () {
@@ -42,23 +55,20 @@ angular.module('script2Bit')
       },
 
       getActorsForScene: function (sceneIndex) {
-        var scene = $rootScope.script.script.scenes[sceneIndex];
-        var characters = [];
-        for (var elementId = 0; elementId < scene.length; elementId++) {
-          var element = scene[elementId];
-          if ((element.type == "dialogue-single" || element.type == "dialogue-dual") &&
-            typeof element.characters != 'undefined') {
-            for (var characterId = 0; characterId < element.characters.length; characterId++) {
-              var character = element.characters[characterId];
-              if (character.type == "character") {
-                characters.push(character.name);
-              }
-            }
-          }
+        var dialogues = getDialoguesForScene(sceneIndex);
+
+        var actorsMap = {};
+        for (var dialogueId = 0; dialogueId < dialogues.length; dialogueId++) {
+          actorsMap[dialogues[dialogueId].actor] = 1;
+        }
+
+        var actors = [];
+        for (var actor in actorsMap) {
+          actors.push(actor);
         }
 
         //convert these to actors based on assignment
-        return characters;
+        return actor;
       },
 
       getDialoguesForScene: function (sceneIndex) {
@@ -71,7 +81,7 @@ angular.module('script2Bit')
             for (var characterId = 0; characterId < element.characters.length; characterId++) {
               var character = element.characters[characterId];
               if (character.type == "character") {
-                var actorLine = {actor: character.name, content: ""};
+                var actorLine = {actor: removeBraces(character.name), content: ""};
                 if (typeof character.lines != 'undefined') {
                   for (var lineId = 0; lineId < character.lines.length; lineId++) {
                     actorLine.content = actorLine.content + "\n" + character.lines[lineId].text;
