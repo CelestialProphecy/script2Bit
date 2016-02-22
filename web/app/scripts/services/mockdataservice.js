@@ -37,7 +37,7 @@ angular.module('script2Bit')
       var index = character_name.indexOf("(");
       if (index > 0) {
         //take it out
-        character_name = character_name.substr(0, index);
+        character_name = character_name.substr(0, index).trim();
       }
 
       return character_name;
