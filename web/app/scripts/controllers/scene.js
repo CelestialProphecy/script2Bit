@@ -60,7 +60,7 @@ angular.module('script2Bit').controller('SceneCtrl', ['$scope', 'actorHelper', '
           var sms = {
               "to" : "+919599937739",
               "from" : "+12065718430",
-              "message" : "Scene: Entrance \n Dialogue:?" + $scope.dialogues
+              "message" : "Scene: Entrance \n Dialogue: How are you? "
               };
               smsService.sendSMS(sms).then(function successCallBack(response) {
                 toastr.success("Message successfully sent");
