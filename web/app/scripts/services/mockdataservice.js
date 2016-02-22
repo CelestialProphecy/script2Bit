@@ -60,7 +60,7 @@ angular.module('script2Bit')
         for (var j=0; j < scene.length; j++) {
           var element = scene[j];
           if (element.type == "heading") {
-            return element.heading;
+            return element.heading.substring(0, element.heading.indexOf("-"));
           }
         }
 
@@ -72,7 +72,17 @@ angular.module('script2Bit')
 
       },
       getSceneTime: function (sceneIndex) {
+        var headings = [];
+        var scene = $rootScope.script.script.scenes[sceneIndex];
+        for (var j=0; j < scene.length; j++) {
+          var element = scene[j];
+          if (element.type == "heading") {
+            return element.heading.substring(element.heading.indexOf("-")+1);
+          }
+        }
 
+
+        return headings;
       },
 
       getActorsForScene: function (sceneIndex) {
