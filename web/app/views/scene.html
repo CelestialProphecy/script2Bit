@@ -1,4 +1,4 @@
-<slick class="scenes-roll" dots="true" variable-width="true" adaptive-height="true" center-mode="true" infinite="false" arrows="true"
+<slick class="scenes-roll" dots="false" variable-width="true" adaptive-height="true" center-mode="true" infinite="false" arrows="true"
        slides-to-show="5" touch-move="true" slides-to-scroll="1" autoplay="false" data="scenes" css-ease="linear"
        init-onload="true">
   <div class="scenes-roll-item" ng-repeat="scene in scenes track by $index">
@@ -20,12 +20,14 @@
 <a class="scene-changer" ng-click="onSceneChange()" ng-show="false">.</a>
 
 <div class="scene-info">
+  <div class="scene-info-item"><span class="scene-info-label">Condition(INT/EXT): </span><span>{{condition ? condition : '--'}}</span></div>
   <div class="scene-info-item"><span class="scene-info-label">Location: </span><span>{{location ? location : '--'}}</span></div>
   <div class="scene-info-item"><span class="scene-info-label">Time: </span><span>{{time ? time : '--'}}</span></div>
   <div class="scene-info-item"><span class="scene-info-label">Duration: </span><span>{{duration ? duration : '--'}}</span></div>
 </div>
 
 <div class="scene-actors-container">
+  <input type="text" ng-model="email" placeholder="Enter email for testing(mandatory)"/>
   <ul class="actors-list">
     <li class="actors-list-item" ng-repeat="(actorName, actorInfo) in actors">
       <div class="actors-list-item-label" title="Expand all {{actorName}}'s dialogues" ng-click="expandDialogues(actorName)">

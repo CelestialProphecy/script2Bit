@@ -8,8 +8,8 @@
  * Controller of the script2Bit
  */
 angular.module('script2Bit').controller('SceneCtrl', ['$scope', 'actorHelper', 'mockDataService', 'smsService',
-'mailService', '$mdDialog', '$rootScope',
-        function ($scope, actorHelper, mockDataService, smsService, mailService, $mdDialog, $rootScope) {
+'mailService', '$mdDialog', '$rootScope', '$location',
+        function ($scope, actorHelper, mockDataService, smsService, mailService, $mdDialog, $rootScope, $location) {
   var setSceneData = function(sceneIndex) {
     $scope.dialogues = mockDataService.getDialoguesForScene(sceneIndex);
     $scope.actors = actorHelper.getActorsFromDialogues($scope.dialogues);
@@ -18,7 +18,9 @@ angular.module('script2Bit').controller('SceneCtrl', ['$scope', 'actorHelper', '
     $scope.time = mockDataService.getSceneTime(sceneIndex);
   };
   var init = function() {
-    $rootScope.loggedIn = true;
+    if(!$rootScope.loggedIn) {
+      $location.path('/');
+    }
     $scope.scenes = mockDataService.getScenes();
     setSceneData(0);
   };
@@ -55,9 +57,9 @@ angular.module('script2Bit').controller('SceneCtrl', ['$scope', 'actorHelper', '
               .cancel('Cancel');
         $mdDialog.show(confirm).then(function() {
           var sms = {
-              "to" : "+1",
-              "from" : "+1",
-              "message" : "Test"
+              "to" : "+919599937739",
+              "from" : "+12065718430",
+              "message" : "Scene: Entrance \n Dialogue: How are you? "
               };
               smsService.sendSMS(sms).then(function successCallBack(response) {
                 toastr.success("Message successfully sent");
@@ -78,9 +80,9 @@ angular.module('script2Bit').controller('SceneCtrl', ['$scope', 'actorHelper', '
             $mdDialog.show(confirm).then(function() {
               var mail = {
                     "from" : 'script2bit@studivo.com',
-                    "to" : "",
-                    "subject" : "",
-                    "message" : ""
+                    "to" : $scope.email,
+                    "subject" : "Scene - Entrance Details",
+                    "message" : "Location: Balcony, Duration: 5 min, Time: Evening \n "
                   };
                   mailService.sendMail(mail).then(function successCallBack(response) {
                     toastr.success("Mail successfully sent");

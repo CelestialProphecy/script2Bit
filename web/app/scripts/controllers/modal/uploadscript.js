@@ -10,11 +10,13 @@
 script2Bit
   .controller('uploadScriptCtrl', ['$scope', '$rootScope', '$uibModalInstance', 'mockDataService', function ($scope, $rootScope, $uibModalInstance, mockDataService) {
     $scope.parseScript = function(scriptText) {
-      // TODO: parse script text and load scenes view
-      //console.log(scriptText);
-      $rootScope.script = fountain.parseToJson(scriptText);
-      $scope.scenes = mockDataService.getScenes();
-      $uibModalInstance.close();
+      if(scriptText != '' || scriptText != undefined) {
+        $rootScope.script = fountain.parseToJson(scriptText);
+        $scope.scenes = mockDataService.getScenes();
+        $uibModalInstance.close();
+      } else {
+        toastr.error("No script found");
+      }
     };
 
     $scope.loadScriptFile = function(element) {

@@ -1,5 +1,6 @@
 package com.script2Bit.dw.configuration;
 
+import com.script2Bit.dw.filters.ResponseFilter;
 import com.script2Bit.dw.resources.MailResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
@@ -54,6 +55,7 @@ public class Script2BitApplication extends Application<Script2BitConfiguration> 
    */
   @Override
   public void run(Script2BitConfiguration configuration, Environment environment) throws ClassNotFoundException {
+    environment.jersey().getResourceConfig().register(new ResponseFilter());
     environment.jersey().register(new MailResource(configuration.getMailConfiguration()));
   }
 }
