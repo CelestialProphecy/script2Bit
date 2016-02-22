@@ -66,19 +66,44 @@ angular.module('script2Bit')
         return scenes;
       },
 
+
       getSceneLocation: function (sceneIndex) {
         var headings = [];
         var scene = $rootScope.script.script.scenes[sceneIndex];
         for (var j=0; j < scene.length; j++) {
           var element = scene[j];
           if (element.type == "heading") {
-            return element.heading.substring(0, element.heading.indexOf("-"));
+            var location = element.heading.substring(0, element.heading.indexOf("-"));
+            if (location.startsWith("EXT.") || location.startsWith("INT.")) {
+              location = location.substr(5);
+            }
+            return location;
           }
         }
 
 
         return headings;
       },
+
+      getSceneCondition: function (sceneIndex) {
+        var location = "";
+        var scene = $rootScope.script.script.scenes[sceneIndex];
+        for (var j=0; j < scene.length; j++) {
+          var element = scene[j];
+          if (element.type == "heading") {
+            location = element.heading.substring(0, element.heading.indexOf("-"));
+          }
+        }
+
+        if (location.startsWith("EXT.")) {
+          return "EXT.";
+        } else if (location.startsWith("INT.")) {
+          return "INT.";
+        } else {
+          return "";
+        }
+      },
+
 
       getSceneDuration: function (sceneIndex) {
         var scene = $rootScope.script.script.scenes[sceneIndex];

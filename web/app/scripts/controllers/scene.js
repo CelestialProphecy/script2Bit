@@ -16,6 +16,7 @@ angular.module('script2Bit').controller('SceneCtrl', ['$scope', 'actorHelper', '
     $scope.location = mockDataService.getSceneLocation(sceneIndex);
     $scope.duration = mockDataService.getSceneDuration(sceneIndex);
     $scope.time = mockDataService.getSceneTime(sceneIndex);
+    $scope.condition = mockDataService.getSceneCondition(sceneIndex);
   };
   var init = function() {
     if(!$rootScope.loggedIn) {
