@@ -50,13 +50,15 @@ TODO: Show what the library does as concisely as possible, developers should be 
 6. `grunt serve`
 
 ### Tips and Troubleshooting
+* If you are having trouble with using script2Bit or having an idea for awesome feature, please [contact us](https://github.com/CelestialProphecy/script2Bit#contact)
 * If you encounter errors during installation, try understand the error first.
 * Google and online forums such as stackoverflow are the best bet for solutions
 * These are what works for me:
 	* Try running it using `sudo`
 	* Try installing the latest/stable version of node.js and npm:
 		* [Node Upgrade](http://stackoverflow.com/questions/10075990/upgrading-node-js-to-latest-version "Node Upgrade")
-		* [NPM Upgrade](http://stackoverflow.com/questions/6237295/how-can-i-update-node-js-and-npm-to-the-next-versions "NPM Upgrade") 
+		* [NPM Upgrade](http://stackoverflow.com/questions/6237295/how-can-i-update-node-js-and-npm-to-the-next-versions "NPM Upgrade")
+* If none of the above works, please contact us and we'll try to help you out.
 
 ### Web
 
@@ -113,26 +115,26 @@ For more details on Twillio see [Twillio][twillio]
 Share your success story with us please! :)
 
 ## Contact
-Let us know how you would like to dive into the project and collaborate with us.
+Let us know how you would like to dive into the project and collaborate with us:
 <hackathon@Studivo.com>
 
-## Team
+## Squad Team
 
-![Budi Mulyo icon][Budi] **Budi Mulyo**
+![Budi Mulyo icon][Budi] **Budi Mulyo, Movie Producer, Maker, and Roboticist**
 
 [Budi]: http://celestialprophecy.github.io/script2Bit/img/team/01.png "Budi Mulyo"
 ___
-![Rajat Nigam icon][Rajat] **Rajat Nigam**
+![Rajat Nigam icon][Rajat] **Rajat Nigam, Software Engineer, Brother of Vaibhav, Lover of Magic**
 
 [Rajat]: http://celestialprophecy.github.io/script2Bit/img/team/02.png "Rajat Nigam"
 
 ___
-![Vaibhav Nigam icon][Vaibhav] **Vaibhav Nigam**
+![Vaibhav Nigam icon][Vaibhav] **Vaibhav Nigam, Software Engineer, Brother of Rajat, Rangoli Artist**
 
 [Vaibhav]: http://celestialprophecy.github.io/script2Bit/img/team/03.png "Vaibhav Nigam"
 
 ___
-![Archis Gore icon][Archis] **Archis Gore**
+![Archis Gore icon][Archis] **Archis Gore, Technologist,Entrepreneur (CTO of [Polyverse](https://www.facebook.com/Polyverse-181771615496034/)), Avid Diver, Dancer, Cook, Filmmaker, etc**
 
 [Archis]: http://celestialprophecy.github.io/script2Bit/img/team/04.png "Archis Gore"
 
