@@ -43,10 +43,17 @@ angular.module('script2Bit')
       },
 
       getActorsForScene: function (sceneIndex) {
-        var dummyActors = ['Rajat', 'Vaibhav', 'Budi', 'Archis', 'Jon', 'Jack', 'Martina', 'Christopher'],
-          pivotIndex = (sceneIndex % 2) * 4;
+        var scene = $rootScope.script.script.scenes[sceneIndex];
 
-        return dummyActors.slice(pivotIndex, pivotIndex + 4);
+        var characters = [];
+        for (var i = 0; i < scene.length; i++) {
+          var element = scene[i];
+          if (element.type == "character") {
+            characters.push(element.name);
+          }
+        }
+
+        return characters;
       },
 
       getDialoguesForScene: function (sceneIndex) {
